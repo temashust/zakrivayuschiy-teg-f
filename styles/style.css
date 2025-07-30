@@ -155,7 +155,6 @@
   align-items: center;
   justify-content: center;
   border: 2px solid transparent;
-  margin: 0px 12px 0 0;
   block-size: 40px;
   background-color: transparent;
   transition-duration: 0.3s;
@@ -174,8 +173,8 @@
 
 .card__button-wrapper {
   display: flex;
-  margin-inline: auto 0;
-  max-block-size: 38px;
+  justify-content: end;
+  margin-block-start: 25px;
 }
 
 .button__text {
