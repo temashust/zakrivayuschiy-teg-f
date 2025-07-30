@@ -16,6 +16,7 @@
   background-image: var(--complex-gradient);
   background-size: cover;
   background-attachment: fixed;
+  font-variation-settings: "wght" var(--card-text-weight, 400);
 }
 
 .header_block {
@@ -38,7 +39,9 @@
   align-items: center;
   border: 2px solid var(--main-color, #000);
   padding-block: clamp(120px, 10vw, 136px) 100px;
-  font-family: var(--accent-font, "PressStart2P-Regular", bold);
+  font-family: var(--accent-font, "PressStart2P-Regular", bold), "Fixedsys", "Courier New", monospace, sans-serif;
+  font-variation-settings: "wght" var(--card-title-weight, 700);
+  display: flex;;
   text-transform: uppercase;
   background-color: var(--bg-color, #fff);
 }
@@ -49,6 +52,7 @@
   margin-block-end: 20px;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-decoration: none;
+  outline: none;
 }
 
 .header__title {
@@ -117,12 +121,9 @@
 }
 
 .article__text {
-  margin-block: 0 27px;
+ margin-block-end: 25px;
 }
 
-.article__opinion {
-  margin-block-end: 25px;
-}
 
 .button {
   position: relative;
@@ -136,6 +137,8 @@
 .card__like-button {
   inline-size: 130px;
   block-size: 38px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
 }
 
 .card__like-button:focus {
@@ -144,17 +147,21 @@
 
 .card__like-button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--main-color, #000);
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
+
 }
 
 .card__icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 2px solid transparent;
   margin: 0px 12px 0 0;
+  block-size: 40px;
   background-color: transparent;
   transition-duration: 0.3s;
   transition-timing-function: ease;
   cursor: pointer;
+        
 }
 
 .card__icon-button:focus {
@@ -163,8 +170,6 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--accent-color, #000);
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
 }
 
 .card__button-wrapper {
@@ -175,7 +180,7 @@
 
 .button__text {
   position: relative;
-  font-family: var(--accent-font, "PressStart2P-Regular");
+  font-family: var(--accent-font, "PressStart2P-Regular"), "Fixedsys", "Courier New", monospace, sans-serif;
   z-index: 1;
   color: var(--button-text-color, #fff);
   font-size: var(--accent-font-size, 0.875rem);
@@ -230,11 +235,6 @@
 .article-img-invert {
   filter: invert(0.15);
 }
-/*footer*/
-
-.footer {
-  padding-block: 50px 182px;
-}
 
 .save-button {
   display: flex;
@@ -245,6 +245,8 @@
   margin: 0 auto;
   padding: 15px 20px;
   max-inline-size: 83vw;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
 }
 
 .save-button:focus {
@@ -253,9 +255,8 @@
 
 .save-button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--main-color, #000);
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
 }
+/*dialog*/
 
 .dialog[open] {
   display: grid;
@@ -269,7 +270,17 @@
   line-height: 1.5;
   text-transform: uppercase;
   background-color: var(--bg-color, #fff);
-  max-inline-size: 341px;
+  max-inline-size: 357px;
+}
+
+.dialog_content{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .floppy {
@@ -298,6 +309,8 @@
 }
 
 /*heart decoration*/
+
+
 .sparkles {
   opacity: 0;
 }
