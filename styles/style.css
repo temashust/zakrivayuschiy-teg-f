@@ -256,7 +256,6 @@
 .save-button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--main-color, #000);
 }
-/*dialog*/
 
 .dialog[open] {
   display: grid;
@@ -271,12 +270,6 @@
   text-transform: uppercase;
   background-color: var(--bg-color, #fff);
   max-inline-size: 357px;
-}
-
-.dialog_content{
-  display: flex;
-  align-items: center;
-  gap: 16px;
 }
 
 .dialog::backdrop {
