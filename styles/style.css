@@ -41,7 +41,6 @@
   padding-block: clamp(120px, 10vw, 136px) 100px;
   font-family: var(--accent-font, "PressStart2P-Regular", bold), "Fixedsys", "Courier New", monospace, sans-serif;
   font-variation-settings: "wght" var(--card-title-weight, 700);
-  display: flex;;
   text-transform: uppercase;
   background-color: var(--bg-color, #fff);
 }
@@ -241,7 +240,7 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   padding: 15px 20px;
   max-inline-size: 83vw;
   transition-duration: 0.3s;
@@ -255,6 +254,24 @@
 .save-button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--main-color, #000);
 }
+.floppy {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  color: var(--button-text-color, #fff);
+  block-size: 21px;
+  inline-size: 21px;
+  mix-blend-mode: difference;
+}
+.floppy {
+  position: relative;
+  z-index: 1;
+  color: var(--button-text-color, #fff);
+  inline-size: var(--floppy-size, 21px);
+  block-size: var(--floppy-size, 21px);
+  mix-blend-mode: difference;
+}
+/*dialog*/
 
 .dialog[open] {
   display: grid;
@@ -271,17 +288,16 @@
   max-inline-size: 357px;
 }
 
-.dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.75);
+.dialog_container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
 }
 
-.floppy {
-  position: relative;
-  z-index: 1;
-  color: var(--button-text-color, #fff);
-  inline-size: var(--floppy-size, 21px);
-  block-size: var(--floppy-size, 21px);
-  mix-blend-mode: difference;
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .floppy_dialog {
@@ -294,14 +310,21 @@
   line-height: 1.5;
 }
 
+
 .modal__button {
   grid-column: 1 / -1;
   text-transform: uppercase;
   inline-size: 100%;
+  block-size: 38px;
+  margin: 0 auto;
+  padding: 13px 0;
+}
+
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 /*heart decoration*/
-
 
 .sparkles {
   opacity: 0;
