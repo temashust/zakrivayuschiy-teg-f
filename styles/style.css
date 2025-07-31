@@ -254,15 +254,8 @@
 .save-button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--main-color, #000);
 }
-.floppy {
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  color: var(--button-text-color, #fff);
-  block-size: 21px;
-  inline-size: 21px;
-  mix-blend-mode: difference;
-}
+
+ 
 .floppy {
   position: relative;
   z-index: 1;
@@ -296,9 +289,6 @@
   align-items: center;
 }
 
-.dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.75);
-}
 
 .floppy_dialog {
   --floppy-size: 39px;
