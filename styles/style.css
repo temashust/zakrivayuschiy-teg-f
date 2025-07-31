@@ -146,7 +146,6 @@
 
 .card__like-button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--main-color, #000);
-
 }
 
 .card__icon-button {
@@ -159,7 +158,6 @@
   transition-duration: 0.3s;
   transition-timing-function: ease;
   cursor: pointer;
-        
 }
 
 .card__icon-button:focus {
@@ -255,7 +253,6 @@
   box-shadow: 2px 2px 0 0 var(--main-color, #000);
 }
 
- 
 .floppy {
   position: relative;
   z-index: 1;
