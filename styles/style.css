@@ -30,6 +30,7 @@
 
 .main__container {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 50px;
 }
 
@@ -38,8 +39,8 @@
   flex-direction: column;
   align-items: center;
   border: 2px solid var(--main-color, #000);
-  padding-block: clamp(120px, 10vw, 136px) 100px;
-  font-family: var(--accent-font, "PressStart2P-Regular", bold), "Fixedsys", "Courier New", monospace, sans-serif;
+  padding-block: clamp(120px, 10vw, 131px) 100px;
+  font-family: var(--accent-font, "PressStart2P", bold), "Fixedsys", "Courier New", monospace, sans-serif;
   font-variation-settings: "wght" var(--card-title-weight, 700);
   text-transform: uppercase;
   background-color: var(--bg-color, #fff);
@@ -84,10 +85,13 @@
   font-family: var(--accent-font);
   font-size: var(--accent-font-size, 0.875rem);
   text-transform: uppercase;
-  text-shadow: -1px 0 var(--bg-color, #fff), 0 1px var(--bg-color, #fff),
-    1px 0 var(--bg-color, #fff), 0 -1px var(--bg-color, #fff);
-  inset-block-start: 23px;
-  inset-inline-end: 25px;
+  text-shadow: 
+      -1px 0 var(--bg-color, #fff),
+      0 1px var(--bg-color, #fff),
+      1px 0 var(--bg-color, #fff),
+      0 -1px var(--bg-color, #fff);
+  inset-block-start: 27px;
+  inset-inline-end: 27px;
   mix-blend-mode: hard-light;
 }
 
@@ -102,8 +106,7 @@
 
 .article__title {
   padding-inline: 10px;
-  padding-block: 4px;
-  font-weight: 700;
+  padding-block: 6px;
   font-size: var(--main-font-size, 1.125rem);
   font-family: var(--main-font);
   line-height: normal;
@@ -122,7 +125,6 @@
 .article__text {
  margin-block-end: 25px;
 }
-
 
 .button {
   position: relative;
@@ -153,8 +155,10 @@
   align-items: center;
   justify-content: center;
   border: 2px solid transparent;
-  block-size: 40px;
+  block-size: 38px;
   background-color: transparent;
+  margin: 0;
+  padding: 0;
   transition-duration: 0.3s;
   transition-timing-function: ease;
   cursor: pointer;
@@ -171,12 +175,12 @@
 .card__button-wrapper {
   display: flex;
   justify-content: end;
-  margin-block-start: 25px;
+  column-gap: 4px;
 }
 
 .button__text {
   position: relative;
-  font-family: var(--accent-font, "PressStart2P-Regular"), "Fixedsys", "Courier New", monospace, sans-serif;
+  font-family: var(--accent-font, "PressStart2P"), "Fixedsys", "Courier New", monospace, sans-serif;
   z-index: 1;
   color: var(--button-text-color, #fff);
   font-size: var(--accent-font-size, 0.875rem);
@@ -312,6 +316,9 @@
 }
 
 /*heart decoration*/
+.like-icon {
+  display: block;
+}
 
 .sparkles {
   opacity: 0;
